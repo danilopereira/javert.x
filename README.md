@@ -1,5 +1,5 @@
 # javert.x
-First Java Project on Vert.x
+How to make your First Java Project on Vert.x
 
 This is my First Vert.x Project using Java.
 
