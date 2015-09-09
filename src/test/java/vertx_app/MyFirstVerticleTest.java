@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.dev.isengard.app.MyFirstVerticle;
+import com.dev.isengard.app.MainVerticle;
 
 import io.vertx.core.Vertx;
 import io.vertx.ext.unit.Async;
@@ -21,7 +21,7 @@ public class MyFirstVerticleTest {
 	public void setup(TestContext context){
 		vertx = Vertx.vertx();
 		
-		vertx.deployVerticle(MyFirstVerticle.class.getName(), context.asyncAssertSuccess());
+		vertx.deployVerticle(MainVerticle.class.getName(), context.asyncAssertSuccess());
 		
 	}
 	
