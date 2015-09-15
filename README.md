@@ -8,7 +8,7 @@ The unique requirement is Java 8 SDK
 Baby-Steps
 
 1. Create a Maven Project (skip archtype)
-2. Configue pom.xml
+2. Configure pom.xml
   ```xml
   <dependencies>
   		<dependency>
