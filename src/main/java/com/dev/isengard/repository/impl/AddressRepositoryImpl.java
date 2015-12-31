@@ -25,11 +25,12 @@ public class AddressRepositoryImpl implements AddressRepositoryApi{
 				if(r2.succeeded()){
 					SQLConnection connection = r2.result();
 					String cepPrimary = cep.substring(0, 5);
+					String cepFinal = cep.substring(0, 5) + "-" + cep.substring(5, 8);
 					connection.query("SELECT UF FROM uf WHERE '"+cepPrimary+"' BETWEEN Cep1 AND Cep2", res->{
 						ResultSet rs = res.result();
 						JsonArray ufS = rs.getResults().get(0);
 						String uf = ufS.toString().toLowerCase().substring(2, 4);
-						connection.query("SELECT * FROM "+uf+" WHERE cep = '"+cep+"'", resFinal->{
+						connection.query("SELECT * FROM "+uf+" WHERE cep = '"+cepFinal+"'", resFinal->{
 							ResultSet result = resFinal.result();
 							r.putHeader("content-type", "application/json; charset=utf-8").end(result.getResults().toString());
 						});

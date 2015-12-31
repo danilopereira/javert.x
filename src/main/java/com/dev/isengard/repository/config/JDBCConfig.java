@@ -7,7 +7,7 @@ import io.vertx.ext.jdbc.JDBCClient;
 public class JDBCConfig{
 	
 	public static final JsonObject config = new JsonObject()
-			.put("url", "jdbc:mysql://localhost:3306/cep")
+			.put("url", "jdbc:mysql://localhost:3306/mysqlonnode")
 			.put("user", "root")
 			.put("password", "")
 			.put("driver_class", "com.mysql.jdbc.Driver")
